@@ -23,7 +23,7 @@ class _RecipeState extends State<Recipe> {
     final response = await http.get(
         "https://api.spoonacular.com/recipes/complexSearch?cuisine=" +
             widget.cuisine +
-            "&apiKey=38119c6d8b2f4b3c92d20a99ca6350eb");
+            "&apiKey=API_KEY");
     if (response.statusCode == 200) {
       setState(() {
         var data = jsonDecode(response.body);
