@@ -25,7 +25,7 @@ class _RecipeDetailsState extends State<RecipeDetails> {
     final response = await http.get(
       "https://api.spoonacular.com/recipes/" +
           widget.recipeId.toString() +
-          "/information?includeNutrition=false&apiKey=38119c6d8b2f4b3c92d20a99ca6350eb",
+          "/information?includeNutrition=false&apiKey=API_KEY",
     );
     if (response.statusCode == 200) {
       setState(() {
@@ -42,7 +42,7 @@ class _RecipeDetailsState extends State<RecipeDetails> {
     final response = await http.get(
       "https://api.spoonacular.com/recipes/" +
           widget.recipeId.toString() +
-          "/analyzedInstructions?stepBreakdown=false&apiKey=38119c6d8b2f4b3c92d20a99ca6350eb",
+          "/analyzedInstructions?stepBreakdown=false&apiKey=API_KEY",
     );
     if (response.statusCode == 200) {
       setState(() {
