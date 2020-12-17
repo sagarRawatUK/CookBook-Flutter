@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:cookbook/static/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
 var recipeDetails;
@@ -72,13 +73,13 @@ class _RecipeDetailsState extends State<RecipeDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.recipeTitle),
-      ),
+          title: Text(widget.recipeTitle,
+              style: GoogleFonts.bangers(textStyle: appbarTextStyle()))),
       body: _isLoading
           ? Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                 child: Column(
                   children: [
                     Image(image: NetworkImage(widget.recipeImage)),
@@ -87,7 +88,8 @@ class _RecipeDetailsState extends State<RecipeDetails> {
                     ),
                     Text(
                       steps,
-                      style: recipeDetailsTextStyle(),
+                      style: GoogleFonts.rockSalt(
+                          textStyle: recipeDetailsTextStyle()),
                     ),
                   ],
                 ),

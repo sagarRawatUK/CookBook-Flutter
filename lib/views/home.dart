@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cookbook/static/constants.dart';
 import 'package:cookbook/helper/auth.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 bool loggedIn = false;
 String imageUrl = '';
@@ -20,7 +21,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(
           "CookBook",
-          style: appbarTextStyle(),
+          style: GoogleFonts.bangers(textStyle: appbarTextStyle()),
         ),
         actions: [
           IconButton(
@@ -56,6 +57,7 @@ class _HomeState extends State<Home> {
           itemCount: cuisines.length,
           itemBuilder: (BuildContext context, int index) {
             return Card(
+              margin: EdgeInsets.all(1),
               child: ListTile(
                 onTap: () {
                   Navigator.push(
@@ -63,13 +65,9 @@ class _HomeState extends State<Home> {
                       MaterialPageRoute(
                           builder: (context) => Recipe(cuisines[index])));
                 },
-                leading: CircleAvatar(
-                  radius: 17,
-                  child: Text((index + 1).toString()),
-                ),
                 title: Text(
                   cuisines[index],
-                  style: cuisineTextStyle(),
+                  style: GoogleFonts.gochiHand(textStyle: cuisineTextStyle()),
                 ),
                 trailing:
                     IconButton(icon: Icon(Icons.star_border), onPressed: () {}),

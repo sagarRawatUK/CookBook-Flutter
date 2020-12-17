@@ -5,6 +5,7 @@ import 'package:cookbook/static/constants.dart';
 import 'package:cookbook/views/recipeDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:google_fonts/google_fonts.dart';
 
 List<dynamic> recipeData;
 bool _isLoading = true;
@@ -50,7 +51,10 @@ class _RecipeState extends State<Recipe> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.cuisine + " Recipes"),
+        title: Text(
+          widget.cuisine + " Recipes",
+          style: GoogleFonts.bangers(textStyle: appbarTextStyle()),
+        ),
       ),
       body: _isLoading
           ? Center(child: CircularProgressIndicator())
@@ -88,7 +92,8 @@ class _RecipeState extends State<Recipe> {
                               footer: Center(
                                   child: Text(
                                 recipeData[index]['title'].toString(),
-                                style: recipeTextStyle(),
+                                style: GoogleFonts.gochiHand(
+                                    textStyle: recipeTextStyle()),
                               )),
                             ),
                           ),

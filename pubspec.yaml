@@ -33,7 +33,7 @@ dependencies:
   cloud_firestore:
   firebase_core:
   google_sign_in:
-  rxdart:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:

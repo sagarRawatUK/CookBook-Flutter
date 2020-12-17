@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 const List cuisines = [
   'African',
@@ -31,20 +32,21 @@ const List cuisines = [
 
 TextStyle cuisineTextStyle() {
   return TextStyle(
-    fontSize: 18,
-    letterSpacing: 1,
+    fontSize: 22,
     fontWeight: FontWeight.w500,
   );
 }
 
 TextStyle appbarTextStyle() {
-  return TextStyle(fontWeight: FontWeight.bold, fontSize: 22);
+  return TextStyle(fontSize: 22, letterSpacing: 1);
 }
 
 TextStyle recipeTextStyle() {
-  return TextStyle(fontSize: 13, fontWeight: FontWeight.w500);
+  return TextStyle(
+    fontSize: 15,
+  );
 }
 
 TextStyle recipeDetailsTextStyle() {
-  return TextStyle(fontSize: 15);
+  return TextStyle(fontSize: 13);
 }
