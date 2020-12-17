@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "55437390216",
+    "project_id": "cookbookrawat",
+    "storage_bucket": "cookbookrawat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55437390216:android:2fb682bd1b32d46b600a3d",
+        "android_client_info": {
+          "package_name": "com.sagarawatuk.cookbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55437390216-g894koigjtbgf0og3qhfq8p8pf7cepcn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sagarawatuk.cookbook",
+            "certificate_hash": "53e8655dc21e56372e871ec7b42dd1f053db82ba"
+          }
+        },
+        {
+          "client_id": "55437390216-4lt0iqciflir9mfbv8l54ca0rsdtq4uq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZKOTA1W268KEk72aUPiTETbJFZJcBCAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55437390216-4lt0iqciflir9mfbv8l54ca0rsdtq4uq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
