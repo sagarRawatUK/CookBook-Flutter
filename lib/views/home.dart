@@ -1,10 +1,12 @@
 import 'package:cookbook/views/recipe.dart';
+import 'package:cookbook/views/userProfile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cookbook/static/constants.dart';
 import 'package:cookbook/helper/auth.dart';
 
 bool loggedIn = false;
+String imageUrl = '';
 
 class Home extends StatefulWidget {
   @override
@@ -34,12 +36,19 @@ class _HomeState extends State<Home> {
                 : () {
                     setState(() {
                       AuthService().signin().then((value) {
-                        var userImage = value.photoURL;
                         loggedIn = true;
+                        imageUrl = value.photoURL;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UserProfile(
+                                    value.photoURL,
+                                    value.displayName,
+                                    value.email)));
                       });
                     });
                   },
-          )
+          ),
         ],
       ),
       body: Container(
